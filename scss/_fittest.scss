@@ -1,0 +1,68 @@
+.container {
+	background-color: $darker;
+	height: 100vh;
+	padding: 10% 0;
+	#bmi,
+	#water-need {
+		width: 70%;
+		border: 1px solid $darker;
+		border-radius: 50px;
+
+		margin: auto;
+		text-align: center;
+		background-color: $darkprimary;
+		// min-height: 300px;
+		padding: 40px 0;
+		h3 {
+			color: $lightsecondary;
+			letter-spacing: 1.5px;
+			margin: auto;
+			padding: 10px 0;
+		}
+		p {
+			padding: 0 10%;
+			padding-bottom: 20px;
+			letter-spacing: 1px;
+			color: $lightsecondary;
+			font-weight: 300;
+			opacity: 0.7;
+		}
+		label {
+			font-weight: 500;
+			letter-spacing: 1.8px;
+			color: $lightsecondary;
+		}
+		input {
+			padding: 8px 0;
+			text-align: center;
+			margin: 5px;
+			border-radius: 20px;
+			border: 2px solid $darker;
+			background-color: $dimdark;
+			&:hover {
+				border: 2px solid $lightsub;
+				transition: 0.25s ease;
+			}
+		}
+		::placeholder {
+			color: $lightsecondary;
+			opacity: 0.4;
+			letter-spacing: 2px;
+		}
+		.button-bmi {
+			background-color: $lightmain;
+			opacity: 1;
+			border-radius: 30px;
+			border: none;
+			color: $lightsecondary;
+			font-size: 16px;
+			margin-top: 10px;
+			padding: 10px;
+			&:hover {
+				background-color: $lightmain;
+				opacity: 0.9;
+				transition: 0.18s ease-in;
+			}
+		}
+	}
+}

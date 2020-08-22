@@ -1,0 +1,48 @@
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	min-height: 8vh;
+	font-family: "Poppins", sans-serif;
+	background-color: $darkprimary;
+
+	.logo {
+		letter-spacing: 4px;
+		font-size: 20px;
+		h3 a {
+			color: $lightsecondary;
+			text-decoration: none;
+		}
+	}
+
+	.nav-link {
+		display: flex;
+		justify-content: space-around;
+		width: 40%;
+		li {
+			list-style: none;
+			a {
+				color: $lightsecondary;
+				text-decoration: none;
+				letter-spacing: 1.8px;
+				font-weight: 400;
+				font-size: 18px;
+			}
+			&:hover a {
+				border-bottom: 2px solid $lightsub;
+				transition: 0.04s ease-in;
+			}
+		}
+	}
+	.burger {
+		margin-left: 35%;
+		display: none;
+		div {
+			width: 25px;
+			height: 3px;
+			background-color: $lightsecondary;
+			margin: 5px;
+			transition: all 0.3s ease;
+		}
+	}
+}

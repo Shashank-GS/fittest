@@ -1,0 +1,19 @@
+// variables and utility functiions
+@import "./utils";
+
+// Global resets
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+// Nav Bar
+@import "./navbara";
+
+// Main FitTest components
+@import "./fittest";
+
+// Mobile view
+@import "./mobile";
