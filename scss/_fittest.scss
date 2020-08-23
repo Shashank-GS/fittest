@@ -18,12 +18,14 @@
 			color: $lightsecondary;
 			letter-spacing: 1.5px;
 			margin: auto;
-			padding: 10px 0;
+			padding: 10px 0 15px 0;
 		}
 		p {
 			padding: 0 10%;
 			padding-bottom: 20px;
 			letter-spacing: 1px;
+			font-size: 18px;
+			line-height: 27px;
 			color: $lightsecondary;
 			font-weight: 300;
 			opacity: 0.7;
@@ -36,12 +38,13 @@
 		input {
 			padding: 8px 0;
 			text-align: center;
-			margin: 5px;
+			margin: 5px; 
+			color:  $lightsecondary ;
 			border-radius: 20px;
 			border: 2px solid $darker;
 			background-color: $dimdark;
 			&:hover {
-				border: 2px solid $lightsub;
+				border: 2px solid $lightmain;
 				transition: 0.25s ease;
 			}
 		}

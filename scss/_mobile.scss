@@ -7,12 +7,13 @@
 				z-index: 2;
 				position: absolute;
 				right: 0px;
-				height: 92vh;
+				height: 91vh;
 				top: 8vh;
 				background-color: $darkprimary;
 				display: flex;
 				flex-direction: column;
 				justify-content: start;
+				
 				// align-items: center; 
 				width: 45%;
 				transform: translateX(100%);
@@ -38,6 +39,8 @@
 						border: none;
 						display: inline-block;
 						width: 100% ;
+						font-family: 'Rubik', sans-serif;
+						font-weight: 400;
 					
 					}
 					
@@ -70,7 +73,8 @@
 			padding: 5%;
 			border-radius: 30px;
 			p{
-				font-size: 10px ;  
+				font-size: 12px ;  
+				line-height: 18px;
 				padding: 0;
 				text-align: center;
 				margin-bottom: 15px; 
