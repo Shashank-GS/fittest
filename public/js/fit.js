@@ -3,16 +3,16 @@ const navSlide=()=>{
     const burger = document.querySelector('.burger');
     const nav= document.querySelector('.nav-link');
     const navLinks= document.querySelectorAll('.nav-link li'); 
-
+     const onClickSidebar= document.querySelector('.sectioncontainer');
     burger.addEventListener('click',()=>{
         nav.classList.toggle('nav-active') ; 
-
+        onClickSidebar.classList.toggle('sectioncontainer-sidebar') ; 
         navLinks.forEach((link, index) =>{
             if (link.style.animation) {
                  link.style.animation= '';
             } else {
                 
-                link.style.animation= 'navLinkFade 0.5s ease forwards 0.5s';
+                link.style.animation= 'navLinkFade 0.25s ease forwards 0.4s';
             }
         });
 

@@ -1,0 +1,4 @@
+It  is a  to do list ... 
+Shivam, Same thing make the calculate button working. 
+I will be doing light mode ..
+ I have tried to make it responsive see if it works .. Tell if anything doesn't work. 

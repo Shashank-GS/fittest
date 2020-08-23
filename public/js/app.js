@@ -7,6 +7,7 @@ $navlinks.forEach((link) => {
 	link.addEventListener("click", (e) => {
 		e.preventDefault();
 		const id = e.target.getAttribute("href");
+		console.log(id);
 		displayComponent(id);
 	});
 });
