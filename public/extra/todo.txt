@@ -3,11 +3,12 @@ Shivam, Same thing make the calculate button working.
 I will be doing light mode ..
  I have tried to make it responsive see if it works .. Tell if anything doesn't work. 
 
- // dark mode
-$darker: #2e3440;
-$darkprimary: #3b4252;
-$dimdark: #4c566a;
-$lightsecondary: #e5e9f0;
+ 
+// darkmode
+// $darker: #2e3440;
+// $darkprimary: #3b4252;
+// $dimdark: #4c566a;
+// $lightsecondary: #e5e9f0;
 
 
 // light mode
@@ -15,5 +16,7 @@ $lightsecondary: #e5e9f0;
 // $darkprimary: #ECEFF4;
 // $dimdark: #D8DEE9;
 // $lightsecondary: #3b4252;
-// $lightmain: #81A1C1;
-$lightsub: #4c566a;
+
+// ----------------------------------------------------- 
+
+

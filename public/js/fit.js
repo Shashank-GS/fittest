@@ -25,6 +25,16 @@ const navSlide=()=>{
 }
 navSlide();
 
+document.querySelector('.switchmode').addEventListener('click', function() {
+    var x= document.querySelector('.switchmode');
+  if (x.innerHTML === "Light Mode") {
+    x.innerHTML = "Dark Mode";
+  } else {
+    x.innerHTML = "Light Mode";
+  }
+    document.body.classList.toggle('lightmode');
+  });
+
 
 
 

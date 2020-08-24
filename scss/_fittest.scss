@@ -1,22 +1,22 @@
 .container {
-	background-color: $darker;
+	background-color: var(--color-background );
 	height: 100vh;
 	padding: 10% 0;
 	#bmi,
 	#water-need,
 	#home {
 		width: 70%;
-		border: 1px solid $dimdark;
+		border: 1px solid var(--color-mild);
 		border-radius: 50px;
 
 		box-shadow:  0px 0px 20px 2px rgba(0, 0, 0, 0.25);
 		margin: auto;
 		text-align: center;
-		background-color: $darkprimary;
+		background-color: var(--color-primary);
 		// min-height: 300px;
 		padding: 40px 0;
 		h3 {
-			color: $lightsecondary;
+			color: var(--color-secondary);
 			letter-spacing: 1.5px;
 			margin: auto;
 			padding: 10px 0 15px 0;
@@ -27,23 +27,23 @@
 			letter-spacing: 1px;
 			font-size: 18px;
 			line-height: 27px;
-			color: $lightsecondary;
+			color: var(--color-secondary);
 			font-weight: 300;
 			opacity: 0.7;
 		}
 		label {
 			font-weight: 500;
 			letter-spacing: 1.8px;
-			color: $lightsecondary;
+			color: var(--color-secondary);
 		}
 		input {
 			padding: 8px 0;
 			text-align: center;
 			margin: 5px; 
-			color:  $lightsecondary ;
+			color:  var(--color-secondary) ;
 			border-radius: 20px;
-			border: 2px solid $darker;
-			background-color: $dimdark;
+			border: 2px solid var(--color-background) ;
+			background-color: var(--color-mild);
 			&:hover {
 				border: 2px solid $lightmain;
 				transition: 0.25s ease;
@@ -53,7 +53,7 @@
 			}
 		}
 		::placeholder {
-			color: $lightsecondary;
+			color: var(--color-secondary) ;
 			opacity: 0.4;
 			letter-spacing: 2px;
 		}
@@ -62,14 +62,18 @@
 			opacity: 1;
 			border-radius: 30px;
 			border: none;
-			color: $lightsecondary;
+			color: $darkmain; 
 			font-size: 16px;
 			margin-top: 10px;
 			padding: 10px;
 			&:hover {
 				background-color: $lightmain;
 				opacity: 0.85;
-				transition: 0.18s ease-in;
+				transition: 0.1s ease-in;
+			}
+
+			&:focus{
+				outline: none;
 			}
 		}
 	}

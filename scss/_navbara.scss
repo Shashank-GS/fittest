@@ -4,17 +4,17 @@ nav {
 	align-items: center;
 	width: 100%;
 	// position: fixed;
-	border-bottom: 2px solid $dimdark;
+	border-bottom: 2px solid var(--color-mild);
 	min-height: 9vh;
 	// box-shadow:  0px 0px 20px 300px rgba(0, 0, 0, 0.25);
 	font-family: "Poppins", sans-serif;
-	background-color: $darkprimary;
+	background-color: var(--color-primary);
 
 	.logo {
 		letter-spacing: 3px;
 		font-size: 25px;
 		h3 a {
-			color: $lightsecondary;
+			color: var(--color-secondary);
 			font-family: 'Rubik', sans-serif;
 			font-weight: bolder; ;
 			text-decoration: none;
@@ -28,7 +28,7 @@ nav {
 		li {
 			list-style: none;
 			a {
-				color: $lightsecondary;
+				color: var(--color-secondary);
 				text-decoration: none;
 				letter-spacing: 1px;
 				font-weight: 300;
@@ -37,7 +37,7 @@ nav {
 				border-radius: 6px;
 			}
 			&:hover a {
-				background-color: $dimdark;
+				background-color: var(--color-mild);
 				transition: 0.04s ease-in;
 			}
 			&:active a {
@@ -46,12 +46,25 @@ nav {
 			}
 		}
 	}
+	.switchmode{
+		padding: 5px 10px; 
+		border: none; 
+		border-radius: 30px; 
+		background-color: $lightmain;
+		color: $darkmain ; 
+		&:hover{
+			opacity: 0.85;
+		}
+		&:focus{
+			outline: none;
+		}
+	}
 	.burger {
 		display: none;
 		div {
 			width: 25px;
 			height: 3px;
-			background-color: $lightsecondary;
+			background-color: var(--color-secondary);
 			margin: 5px;
 			transition: all 0.3s ease;
 		}

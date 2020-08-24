@@ -9,7 +9,7 @@
 				right: 0px;
 				height: 91vh;
 				top: 8vh;
-				background-color: $darkprimary;
+				background-color: var(--color-primary);
 				display: flex;
 				flex-direction: column;
 				justify-content: start;
@@ -27,7 +27,7 @@
 					text-align: center;
 					&:hover {
 						/* width: 100%; */
-						background-color:  $dimdark ;
+						background-color:  var(--color-mild) ;
 						// max-width: 50px ; 
 						a{
 							border: none;
@@ -49,10 +49,11 @@
 			.nav-active {
 				transform: translateX(0);
 			}
-
+			.switchmode{
+				margin-left: 9%;
+			}
 			.burger {
 				cursor: pointer;
-				margin-left: 35%;
 				display: block;
 			}
 		}
