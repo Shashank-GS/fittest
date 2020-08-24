@@ -22,24 +22,29 @@ $calculateForms.forEach((calcForm) => {
 	calcForm.addEventListener("submit", (e) => {
 		e.preventDefault();
 		const toolId = e.target.querySelector("button").id;
+		const formData = getFormData(e.target);
 
 		switch (toolId) {
+			// BMI Tool
 			case "button-bmi":
-				const height = e.target.parentElement.querySelector("input#height")
-					.value;
-				const weight = e.target.parentElement.querySelector("input#weight")
-					.value;
-				const resultDiv = e.target.parentElement.parentElement.querySelector(
-					".results"
-				);
 				displayBmi(
-					{ height: parseFloat(height), weight: parseFloat(weight) },
-					resultDiv
+					{
+						height: parseFloat(formData.height),
+						weight: parseFloat(formData.weight),
+					},
+					formData.resultDiv
 				);
 				break;
 
+			// Water requirements tool
 			case "button-water-needs":
-				displayWaterNedd();
+				displayWaterNedd(
+					{
+						weight: parseFloat(formData.weight),
+						excerciseHours: parseFloat(formData.excerciseHours),
+					},
+					formData.resultDiv
+				);
 				break;
 		}
 	});
@@ -70,4 +75,27 @@ function displayBmi(userStats, resultDiv) {
 // display water-need
 function displayWaterNedd() {
 	console.log("this is water needs");
+}
+
+function getFormData(target) {
+	// return dom elements data (if exists/required)
+	return {
+		// Height of user
+		height: target.parentElement.querySelector("input#height")
+			? target.parentElement.querySelector("input#height").value
+			: undefined,
+
+		// Weight of user
+		weight: target.parentElement.querySelector("input#weight")
+			? target.parentElement.querySelector("input#weight").value
+			: undefined,
+
+		// Excersice Hours of user
+		excerciseHours: target.parentElement.querySelector("input#excerciseHours")
+			? target.parentElement.querySelector("input#excerciseHours").value
+			: undefined,
+
+		// Div where results have to be displayed
+		resultDiv: target.parentElement.parentElement.querySelector(".results"),
+	};
 }
