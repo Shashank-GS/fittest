@@ -68,10 +68,11 @@
 		#bmi,
 		#water-need,
 		#home {
-			width: 95%;
+			width: 93%;
 			margin: auto;
 			padding: 5%;
 			border-radius: 30px;
+			box-shadow:  0px 0px 10px 1px rgba(0, 0, 0, 0.25);
 			p{
 				font-size: 12px ;  
 				line-height: 18px;
@@ -81,7 +82,7 @@
 			}
 			label{
 				font-size: 17px;
-				font-weight: 400;;
+				font-weight: 400;
 
 			}
 		}
