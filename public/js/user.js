@@ -2,7 +2,7 @@ class User {
 	constructor(userStats) {
 		this.height = userStats.height;
 		this.weight = userStats.weight;
-		this.excerciseHours = userStats.excerciseHours;
+		this.excerciseMinutes = userStats.excerciseMinutes;
 	}
 
 	bmi() {
@@ -19,6 +19,20 @@ class User {
 
 		// return the result
 		return { bmi, message };
+	}
+
+	// Calculate water intake
+	waterNeeds() {
+		// formula to calculate water intake based on weight and workout minutes
+		const waterIntake = parseFloat(
+			(
+				(this.weight * 2.205 * (2 / 3) + this.excerciseMinutes * 0.4) /
+				33.814
+			).toFixed(2)
+		);
+
+		// return water intake in liters
+		return waterIntake;
 	}
 }
 
