@@ -68,7 +68,7 @@ function displayBmi(userStats, resultDiv) {
 	resultDiv.innerHTML = `
 	<br>
 	<p>BMI: ${result.bmi}</p>
-	<p>${result.message}</p>
+	<p><strong>${result.message}</strong></p>
 	`;
 }
 
@@ -77,7 +77,7 @@ function displayWaterNedd(userStats, resultDiv) {
 	const result = new User(userStats).waterNeeds();
 	resultDiv.innerHTML = `
 	<br>
-	<p>You should drink approx ${result} Liters of water every day.</p>
+	<p>You should drink <strong>approx ${result} Liters</strong> of water every day.</p>
 	`;
 }
 
