@@ -1,15 +1,30 @@
 //  Universal color
 $lightmain: #8FBCBB;
+$darkmain: #3b4252;
+// Dark Mode
+$dark-high: #2e3440;
+$dark-medium: #3b4252;
+$dark-dim: #4c566a;
+$dark-inverse: #e5e9f0;
 
-// darkmode
-// $darker: #2e3440;
-// $darkprimary: #3b4252;
-// $dimdark: #4c566a;
-// $lightsecondary: #e5e9f0;
+// Light Mode
+$light-high:  #E5E9F0;
+$light-medium: #ECEFF4;
+$light-dim: #D8DEE9;
+$light-inverse: #3b4252;
+   
 
+:root{
+    --color-background: #{$dark-high};
+    --color-primary: #{$dark-medium};
+    --color-mild: #{$dark-dim};
+    --color-secondary: #{$dark-inverse};
+}
 
-// light mode
-$darker:  #E5E9F0;
-$darkprimary: #ECEFF4;
-$dimdark: #D8DEE9;
-$lightsecondary: #3b4252;
+.lightmode{
+    --color-background: #{$light-high};
+    --color-primary: #{$light-medium};
+    --color-mild: #{$light-dim};
+    --color-secondary: #{$light-inverse}; 
+  }
+
