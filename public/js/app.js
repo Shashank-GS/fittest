@@ -41,7 +41,7 @@ $calculateForms.forEach((calcForm) => {
 				displayWaterNedd(
 					{
 						weight: parseFloat(formData.weight),
-						excerciseHours: parseFloat(formData.excerciseHours),
+						excerciseMinutes: parseFloat(formData.excerciseMinutes),
 					},
 					formData.resultDiv
 				);
@@ -73,8 +73,12 @@ function displayBmi(userStats, resultDiv) {
 }
 
 // display water-need
-function displayWaterNedd() {
-	console.log("this is water needs");
+function displayWaterNedd(userStats, resultDiv) {
+	const result = new User(userStats).waterNeeds();
+	resultDiv.innerHTML = `
+	<br>
+	<p>You should drink approx ${result} Liters of water every day.</p>
+	`;
 }
 
 function getFormData(target) {
@@ -91,8 +95,10 @@ function getFormData(target) {
 			: undefined,
 
 		// Excersice Hours of user
-		excerciseHours: target.parentElement.querySelector("input#excerciseHours")
-			? target.parentElement.querySelector("input#excerciseHours").value
+		excerciseMinutes: target.parentElement.querySelector(
+			"input#excerciseMinutes"
+		)
+			? target.parentElement.querySelector("input#excerciseMinutes").value
 			: undefined,
 
 		// Div where results have to be displayed
