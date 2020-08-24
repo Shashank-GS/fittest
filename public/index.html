@@ -4,7 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>FitTest| Home</title>
-		<link rel="shortcut icon" type="image/png" href="./extra/favicontitle.ico"/>
+		<link
+			rel="shortcut icon"
+			type="image/png"
+			href="./extra/favicontitle.ico"
+		/>
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -22,80 +26,106 @@
 	</head>
 	<body>
 		<div id="wrapper">
-		<nav>
-			<div class="logo">
-				<h3>
-					<a href=""><i class="fa fa-heartbeat"></i> FitTest</a>
-				</h3>
-			</div>
+			<nav>
+				<div class="logo">
+					<h3>
+						<a href=""><i class="fa fa-heartbeat"></i> FitTest</a>
+					</h3>
+				</div>
 
-			<ul class="nav-link">
-				<li><a href="#home">Home</a></li>
-				<li><a href="#bmi">BMI</a></li>
-				<li><a href="#water-need">H<sub>2</sub>O Needs</a></li>
-				<li><a href="#blood">Blood</a></li>
-			</ul>
+				<ul class="nav-link">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#bmi">BMI</a></li>
+					<li><a href="#water-need">H<sub>2</sub>O Needs</a></li>
+					<li><a href="#blood">Blood</a></li>
+				</ul>
 
-			<div class="burger">
-				<div class="line1"></div>
-				<div class="line2"></div>
-				<div class="line3"></div>
-			</div>
-		</nav>
-<div class="sectioncontainer">
-		<section class="container isComponent">
-			<div id="home">
-				<h3>This is Home...</h3>
-				<p>
-					Home body
-				</p>
-			</div>
-		</section>
+				<div class="burger">
+					<div class="line1"></div>
+					<div class="line2"></div>
+					<div class="line3"></div>
+				</div>
+			</nav>
+			<div class="sectioncontainer">
+				<section class="container isComponent">
+					<div id="home">
+						<h3>This is Home...</h3>
+						<p>
+							Home body
+						</p>
+					</div>
+				</section>
 
-		<section class="container isComponent">
-			<div id="bmi">
-				<h3>Calculate your Body Mass Index</h3>
-				<p>
-					BMI (Body Mass Index) is important as it is widely regarded that your
-					chances of having a longer and healthier life are improved if you have
-					a healthy BMI. So check out your BMI with simple parameters to stay
-					fit , stay healthy and live longer.
-				</p>
-				<form action="">
-				<label for="height">Height: </label>
-				<input type="number" placeholder="Height in cms" value="" /><br />
-				<label for="weight">Weight: </label>
-				<input type="number" placeholder="Weight in kgs" value="" /><br />
-				</form>
-				<button class="button-bmi" type="submit">Calculate</button>
+				<section class="container isComponent">
+					<div id="bmi">
+						<h3>Calculate your Body Mass Index</h3>
+						<p>
+							BMI (Body Mass Index) is important as it is widely regarded that
+							your chances of having a longer and healthier life are improved if
+							you have a healthy BMI. So check out your BMI with simple
+							parameters to stay fit , stay healthy and live longer.
+						</p>
+						<form action="">
+							<label for="height">Height: </label>
+							<input
+								type="number"
+								id="height"
+								placeholder="Height in cms"
+								value=""
+								required
+							/><br />
+							<label for="weight">Weight: </label>
+							<input
+								type="number"
+								id="weight"
+								placeholder="Weight in kgs"
+								value=""
+								required
+							/><br />
+							<button id="button-bmi" class="button-bmi" type="submit">
+								Calculate
+							</button>
+						</form>
+						<div class="results"></div>
+					</div>
+				</section>
+				<section class="container isComponent">
+					<div id="water-need">
+						<h3>Calculate your Daily Water Requirements</h3>
+						<p>
+							Water is important for most processes your body goes through in a
+							day. When you drink water, you replenish your stores. Without
+							enough water, your body and its organs can’t function properly.
+							But still many times the amount of water to be consumed always
+							remains a question. So check your water requirements instantly.
+						</p>
+						<form action="">
+							<label for="weight">Weight: </label>
+							<input
+								type="number"
+								id="weight"
+								placeholder="Weight in kgs"
+								value=""
+								required
+							/><br />
+							<label for="excerciseHours">Exercise: </label>
+							<input
+								type="number"
+								id="excerciseHours"
+								placeholder="Daliy Exercices in hrs"
+								value=""
+								required
+							/><br />
+							<button id="button-water-needs" class="button-bmi" type="submit">
+								Calculate
+							</button>
+						</form>
+						<div class="results"></div>
+					</div>
+				</section>
 			</div>
-		</section>
-		<section class="container isComponent">
-			<div id="water-need">
-				<h3>Calculate your Daily Water Requirements</h3>
-				<p>
-					Water is important for most processes your body goes through in a day.
-					When you drink water, you replenish your stores. Without enough water,
-					your body and its organs can’t function properly. But still many times
-					the amount of water to be consumed always remains a question. So check
-					your water requirements instantly.
-				</p>
-				<form action="">
-				<label for="weight">Weight: </label>
-				<input type="number" placeholder="Weight in kgs" value="" /><br />
-				<label for="exercise">Exercise: </label>
-				<input
-					type="number"
-					placeholder="Daliy Exercices in hrs"
-					value=""
-				/><br />
-			</form>
-				<button class="button-bmi" type="submit">Calculate</button>
-			</div>
-		</section>
-	</div>
-		<script src="./js/fit.js"></script>
-		<script src="./js/app.js"></script>
-	</div>
+			<script src="./js/fit.js"></script>
+			<script src="./js/app.js" type="module"></script>
+		</div>
 	</body>
 </html>
