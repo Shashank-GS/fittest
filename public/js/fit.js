@@ -12,7 +12,7 @@ const navSlide = () => {
         link.style.animation = '';
       } else {
 
-        link.style.animation = 'navLinkFade 0.25s ease forwards 0.4s';
+        link.style.animation = 'navLinkFade 0.2s ease forwards 0.3s';
       }
     });
 
