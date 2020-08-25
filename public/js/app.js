@@ -24,6 +24,12 @@ $calculateForms.forEach((calcForm) => {
 		const toolId = e.target.querySelector("button").id;
 		const formData = getFormData(e.target);
 
+		if (!checkValidity(formData)) {
+			return (formData.resultDiv.innerHTML = `
+			<br>
+			<p>Invalid Input Data!</p>`);
+		}
+
 		switch (toolId) {
 			// BMI Tool
 			case "button-bmi":
@@ -81,27 +87,40 @@ function displayWaterNedd(userStats, resultDiv) {
 	`;
 }
 
+// get user data from dom
 function getFormData(target) {
 	// return dom elements data (if exists/required)
 	return {
 		// Height of user
 		height: target.parentElement.querySelector("input#height")
-			? target.parentElement.querySelector("input#height").value
+			? parseFloat(target.parentElement.querySelector("input#height").value)
 			: undefined,
 
 		// Weight of user
 		weight: target.parentElement.querySelector("input#weight")
-			? target.parentElement.querySelector("input#weight").value
+			? parseFloat(target.parentElement.querySelector("input#weight").value)
 			: undefined,
 
 		// Excersice Hours of user
 		excerciseMinutes: target.parentElement.querySelector(
 			"input#excerciseMinutes"
 		)
-			? target.parentElement.querySelector("input#excerciseMinutes").value
+			? parseFloat(
+					target.parentElement.querySelector("input#excerciseMinutes").value
+			  )
 			: undefined,
 
 		// Div where results have to be displayed
 		resultDiv: target.parentElement.parentElement.querySelector(".results"),
 	};
+}
+
+// validate the user data
+function checkValidity(data) {
+	const validHeight = data.height !== undefined ? data.height > 0 : true;
+	const validWeight = data.weight !== undefined ? data.weight > 0 : true;
+	const validMinutes =
+		data.excerciseMinutes !== undefined ? data.excerciseMinutes >= 0 : true;
+
+	return validHeight && validWeight && validMinutes;
 }
