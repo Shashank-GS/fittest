@@ -41,6 +41,21 @@
 			padding-bottom: 9px;
 			opacity: 0.9;
 			}
+			.warning-msg{
+				color: $yellow;
+			}
+			.normal-msg{
+				color: $green;
+			}
+			.severe-msg{
+				color: $red;
+			}
+			.invalid-msg{
+				font-style: oblique;
+				font-family: cursive;
+				color: $red;
+				opacity: 1;
+			}
 	} 
 		label {
 			font-weight: 500;
