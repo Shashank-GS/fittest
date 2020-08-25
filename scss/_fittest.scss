@@ -3,9 +3,9 @@
 .container {
 	background-color: var(--color-background );
 	transition: 0.15s ease-out;
-	height: 100vh;
+	min-height: 300px;
 	// padding-top: 5%;
-	padding: 13% 0 0% 0;
+	padding: 13% 0 9% 0;
 	#bmi,
 	#water-need,
 	#home {
@@ -38,8 +38,9 @@
 		.results{ 
 			p{	
 			font-size: 20px; 
+			font-weight: 400;
 			padding-bottom: 9px;
-			opacity: 0.9;
+			opacity: 0.85;
 			}
 			.warning-msg{
 				color: $yellow;
@@ -51,9 +52,10 @@
 				color: $red;
 			}
 			.invalid-msg{
+				margin-top: 15px;
 				font-style: oblique;
-				color: $red;
-				opacity: 1;
+				line-height: 0px;
+				font-size: 18px;
 			}
 	} 
 		label {
@@ -76,6 +78,11 @@
 			&:focus{
 				outline: none;
 			}
+			&[type=number]::-webkit-inner-spin-button, 
+			&[type=number]::-webkit-outer-spin-button { 
+ 			-webkit-appearance: none; 
+  			margin: 0; 
+}
 		}
 		::placeholder {
 			color: var(--color-secondary) ;
@@ -104,4 +111,13 @@
 		}
 	}
 }
+}
+footer{
+	min-height: 70px;
+	background-color: var(--color-primary) ;
+	text-align: center;
+	padding-top: 30px ;
+	color: var(--color-secondary);
+	border-top: 1px solid var(--color-mild) ;
+	// position: fixed;
 }

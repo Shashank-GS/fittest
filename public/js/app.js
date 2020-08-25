@@ -23,11 +23,14 @@ $calculateForms.forEach((calcForm) => {
 		e.preventDefault();
 		const toolId = e.target.querySelector("button").id;
 		const formData = getFormData(e.target);
+		const validityMessages = checkValidity(formData);
 
-		if (!checkValidity(formData)) {
+		if (validityMessages.length !== 0) {
 			return (formData.resultDiv.innerHTML = `
-			<br>
-			<p class="invalid-msg">Invalid Input Data!</p>`);
+				${validityMessages
+					.map((message) => `<p class="invalid-msg">${message}</p>`)
+					.join("")}
+				`);
 		}
 
 		switch (toolId) {
@@ -115,12 +118,29 @@ function getFormData(target) {
 	};
 }
 
-// validate the user data
 function checkValidity(data) {
-	const validHeight = data.height !== undefined ? data.height > 0 : true;
-	const validWeight = data.weight !== undefined ? data.weight > 0 : true;
-	const validMinutes =
-		data.excerciseMinutes !== undefined ? data.excerciseMinutes >= 0 : true;
+	const messages = [];
 
-	return validHeight && validWeight && validMinutes;
+	if (data.height !== undefined) {
+		data.height <= 0 ? messages.push("Height must be positive!") : null;
+		(data.height <= 45 || data.height >= 251) && data.height > 0
+			? messages.push("Are you sure about your height?")
+			: null;
+	}
+	if (data.weight !== undefined) {
+		data.weight <= 0 ? messages.push("Weight must be positive!") : null;
+		(data.weight <= 2 || data.weight >= 442) && data.weight > 0
+			? messages.push("Are you sure about your weight?")
+			: null;
+	}
+	if (data.excerciseMinutes !== undefined) {
+		data.excerciseMinutes < 0
+			? messages.push("Excersice minutes must be positive!")
+			: null;
+		data.excerciseMinutes >= 960
+			? messages.push("Are you sure about your excercise minutes?")
+			: null;
+	}
+
+	return messages;
 }
