@@ -10,15 +10,26 @@ class User {
 		const bmi = parseFloat((this.weight / (this.height / 100) ** 2).toFixed(2));
 		// Declare result message
 		let message;
+		// Declare result class
+		let resClass;
 
 		// Decide result message based on BMI range
-		if (bmi >= 18.5 && bmi <= 24.9) message = "Normal or Healthy Weight";
-		else if (bmi >= 25.0 && bmi <= 29.9) message = "Overweight";
-		else if (bmi < 18.5) message = "Underweight";
-		else message = "Obese";
+		if (bmi >= 18.5 && bmi <= 24.9) {
+			message = "Normal or Healthy Weight";
+			resClass = "normal-msg";
+		} else if (bmi >= 25.0 && bmi <= 29.9) {
+			message = "Overweight";
+			resClass = "warning-msg";
+		} else if (bmi < 18.5) {
+			message = "Underweight";
+			resClass = "warning-msg";
+		} else {
+			message = "Obese";
+			resClass = "severe-msg";
+		}
 
 		// return the result
-		return { bmi, message };
+		return { bmi, message, resClass };
 	}
 
 	// Calculate water intake

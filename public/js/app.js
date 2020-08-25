@@ -27,7 +27,7 @@ $calculateForms.forEach((calcForm) => {
 		if (!checkValidity(formData)) {
 			return (formData.resultDiv.innerHTML = `
 			<br>
-			<p>Invalid Input Data!</p>`);
+			<p class="invalid-msg">Invalid Input Data!</p>`);
 		}
 
 		switch (toolId) {
@@ -74,7 +74,7 @@ function displayBmi(userStats, resultDiv) {
 	resultDiv.innerHTML = `
 	<br>
 	<p>BMI: ${result.bmi}</p>
-	<p><strong>${result.message}</strong></p>
+	<p class="${result.resClass}"><strong>${result.message}</strong></p>
 	`;
 }
 
@@ -83,7 +83,7 @@ function displayWaterNedd(userStats, resultDiv) {
 	const result = new User(userStats).waterNeeds();
 	resultDiv.innerHTML = `
 	<br>
-	<p>You should drink <strong>approx ${result} Liters</strong> of water every day.</p>
+	<p class="water-msg">You should drink <strong>approx ${result} Liters</strong> of water every day.</p>
 	`;
 }
 
